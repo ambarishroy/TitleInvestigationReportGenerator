@@ -1,0 +1,6 @@
+@TIR.ReportDraftService_HostAddress = http://localhost:5127
+
+GET {{TIR.ReportDraftService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

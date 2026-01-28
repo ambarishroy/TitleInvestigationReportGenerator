@@ -1,0 +1,6 @@
+@TIR.DocumentService_HostAddress = http://localhost:5253
+
+GET {{TIR.DocumentService_HostAddress}}/documents/
+Accept: application/json
+
+###

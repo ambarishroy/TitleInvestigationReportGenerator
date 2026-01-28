@@ -1,0 +1,6 @@
+@TIR.OcrService_HostAddress = http://localhost:5043
+
+GET {{TIR.OcrService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
