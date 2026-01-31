@@ -12,8 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Extractors\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Rules\" />
   </ItemGroup>
 
