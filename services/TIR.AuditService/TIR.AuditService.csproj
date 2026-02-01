@@ -11,12 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
-    <Folder Include="Queries\" />
-    <Folder Include="Storage\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\shared\TIR.SharedKernel\TIR.SharedKernel.csproj" />
   </ItemGroup>
 
