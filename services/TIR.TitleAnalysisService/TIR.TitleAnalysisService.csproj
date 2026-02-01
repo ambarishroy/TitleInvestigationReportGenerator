@@ -11,13 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\" />
     <Folder Include="RiskRules\" />
     <Folder Include="OwnershipRules\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\shared\TIR.SharedKernel\TIR.SharedKernel.csproj" />
+    <ProjectReference Include="..\TIR.LegalExtractionService\TIR.LegalExtractionService.csproj" />
   </ItemGroup>
 
 </Project>
