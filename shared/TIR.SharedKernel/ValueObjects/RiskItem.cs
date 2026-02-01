@@ -1,6 +1,10 @@
-﻿using TIR.SharedKernel.ValueObjects;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TIR.TitleAnalysisService.Domain
+namespace TIR.SharedKernel.ValueObjects
 {
     public sealed class RiskItem
     {

@@ -1,4 +1,6 @@
-﻿namespace TIR.ProjectService.Domain
+﻿using TIR.SharedKernel.Enums;
+
+namespace TIR.ProjectService.Domain
 {
     public sealed class TIRProject
     {

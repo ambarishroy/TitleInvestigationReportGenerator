@@ -1,4 +1,5 @@
 ﻿using TIR.DocumentService.Domain;
+using TIR.SharedKernel.Enums;
 
 namespace TIR.DocumentService.Application
 {
