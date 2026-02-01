@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using TIR.LegalExtractionService.Domain;
+using TIR.SharedKernel.ValueObjects;
+using TIR.SharedKernel.Enums;
 using TIR.LegalExtractionService.Application;
 
 namespace TIR.LegalExtractionService.Infrastructure

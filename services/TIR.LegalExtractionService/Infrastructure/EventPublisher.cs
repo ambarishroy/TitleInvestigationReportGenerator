@@ -1,5 +1,4 @@
-﻿using TIR.LegalExtractionService.Domain;
-
+﻿using TIR.SharedKernel.ValueObjects;
 namespace TIR.LegalExtractionService.Infrastructure
 {
     public sealed class EventPublisher

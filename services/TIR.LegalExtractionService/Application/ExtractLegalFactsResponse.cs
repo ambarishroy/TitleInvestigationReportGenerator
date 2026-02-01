@@ -1,5 +1,4 @@
-﻿using TIR.LegalExtractionService.Domain;
-
+﻿using TIR.SharedKernel.ValueObjects;
 namespace TIR.LegalExtractionService.Application
 {
     public sealed class ExtractLegalFactsResponse
