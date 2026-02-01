@@ -1,6 +1,4 @@
 ﻿using System;
-using TIR.TitleAnalysisService.Domain;
-
 using System.Linq;
 using System.Security.AccessControl;
 using TIR.SharedKernel.ValueObjects;

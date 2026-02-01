@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TIR.TitleAnalysisService.Domain;
+using TIR.SharedKernel.ValueObjects;
 
 namespace TIR.TitleAnalysisService.Application;
 

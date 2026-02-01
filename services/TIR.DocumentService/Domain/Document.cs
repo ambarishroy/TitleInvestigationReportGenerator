@@ -1,4 +1,6 @@
-﻿namespace TIR.DocumentService.Domain
+﻿using TIR.SharedKernel.Enums;
+
+namespace TIR.DocumentService.Domain
 {
     public sealed class Document
     {
