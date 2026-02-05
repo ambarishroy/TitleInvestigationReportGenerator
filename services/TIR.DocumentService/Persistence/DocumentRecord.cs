@@ -14,8 +14,10 @@ namespace TIR.DocumentService.Persistence
         public string Language { get; set; } = default!;
         public string UploadedBy { get; set; } = default!;
         public DateTime UploadedAtUtc { get; set; }
-
-        // Evidence fingerprint
         public string Sha256Hash { get; set; } = default!;
+        public void ApplyStatus(DocumentStatus status)
+        {
+            Status = status;
+        }
     }
 }

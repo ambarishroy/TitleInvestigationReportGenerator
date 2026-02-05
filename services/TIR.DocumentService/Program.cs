@@ -17,6 +17,8 @@ builder.Services.AddScoped<IS3StorageService, S3StorageService>();
 builder.Services.AddScoped<IDomainEventPublisher, EventBridgePublisher>();
 builder.Services.AddScoped<IAuditPublisher, AuditPublisher>();
 builder.Services.AddScoped<DocumentUploadService>();
+builder.Services.AddScoped<OcrCompletedEventHandler>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
