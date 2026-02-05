@@ -9,14 +9,16 @@ namespace TIR.SharedKernel.Events
 {
     public sealed record DocumentUploadedEvent
    (
-       Guid TenantId,
-       Guid ProjectId,
-       Guid DocumentId,
-       DocumentType DocumentType,
-       string FileName,
-       int PageCount,
-       string Language,
-       DateTime UploadedAtUtc,
-       string CorrelationId
+        Guid TenantId,
+        Guid ProjectId,
+        Guid DocumentId,
+        DocumentType DocumentType,
+        string FileName,
+        int PageCount,
+        string Language,
+        string S3Bucket,
+        string S3Key,
+        DateTime UploadedAtUtc,
+        string CorrelationId
    );
 }

@@ -1,6 +1,6 @@
+using TIR.DocumentService.Application;
 using TIR.DocumentService.Audit;
 using TIR.DocumentService.Events;
-using TIR.DocumentService.Infrastructure.Audit;
 using TIR.DocumentService.Infrastructure.Storage;
 using TIR.DocumentService.Persistence;
 
