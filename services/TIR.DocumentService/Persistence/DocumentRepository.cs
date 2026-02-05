@@ -42,5 +42,22 @@ namespace TIR.DocumentService.Persistence
                 record.Language,
                 record.UploadedBy);
         }
+        public async Task UpdateAsync(Document document, CancellationToken ct)
+        {
+            var record = await _db.Documents
+                .FirstOrDefaultAsync(d => d.DocumentId == document.DocumentId, ct);
+
+            if (record == null)
+            {
+                throw new InvalidOperationException(
+                    $"Document {document.DocumentId} not found for update.");
+            }
+            //record.Status = document.Status;
+            record.ApplyStatus(document.Status);
+
+
+            await _db.SaveChangesAsync(ct);
+        }
+
     }
 }
