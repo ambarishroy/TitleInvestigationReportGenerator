@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TIR.SharedKernel.Enums;
+
+namespace TIR.SharedKernel.Events
+{
+    public sealed record DocumentUploadedEvent
+   (
+       Guid TenantId,
+       Guid ProjectId,
+       Guid DocumentId,
+       DocumentType DocumentType,
+       string FileName,
+       int PageCount,
+       string Language,
+       DateTime UploadedAtUtc,
+       string CorrelationId
+   );
+}
