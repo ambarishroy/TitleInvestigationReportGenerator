@@ -55,6 +55,8 @@ namespace TIR.DocumentService.Application
                document.FileName,
                document.PageCount,
                document.Language,
+               bucket,
+               key,
                document.UploadedAtUtc,
                correlationId),
            correlationId,

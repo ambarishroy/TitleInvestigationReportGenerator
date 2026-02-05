@@ -11,9 +11,9 @@ namespace TIR.SharedKernel.Events
         Guid TenantId,
         Guid ProjectId,
         Guid DocumentId,
-        string OcrTextS3Bucket,
-        string OcrTextS3Key,
+        bool IsFullyReadable,
         double AverageConfidence,
+        IReadOnlyList<int> FailedPages,
         DateTime ProcessedAtUtc,
         string CorrelationId
 
