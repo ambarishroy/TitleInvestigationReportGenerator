@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\shared\TIR.SharedKernel\TIR.SharedKernel.csproj" />
+    <ProjectReference Include="..\TIR.DocumentService\TIR.DocumentService.csproj" />
   </ItemGroup>
 
 </Project>

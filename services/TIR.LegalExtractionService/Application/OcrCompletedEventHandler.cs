@@ -3,6 +3,7 @@ using Amazon.S3.Model;
 using System.Text;
 using TIR.LegalExtractionService.Extractors;
 using TIR.LegalExtractionService.Infrastructure;
+using TIR.SharedKernel.Audit;
 using TIR.SharedKernel.Events;
 
 namespace TIR.LegalExtractionService.Application
@@ -13,17 +14,15 @@ namespace TIR.LegalExtractionService.Application
         private readonly EventPublisher _publisher;
         private readonly IAmazonS3 _s3;
         private readonly IConfiguration _config;
+        private readonly IAuditPublisher _audit;
 
-        public OcrCompletedEventHandler(
-            FactExtractor extractor,
-            EventPublisher publisher,
-            IAmazonS3 s3,
-            IConfiguration config)
+        public OcrCompletedEventHandler(FactExtractor extractor, EventPublisher publisher, IAmazonS3 s3, IConfiguration config, IAuditPublisher audit)
         {
             _extractor = extractor;
             _publisher = publisher;
             _s3 = s3;
             _config = config;
+            _audit = audit;
         }
 
         public async Task HandleAsync(
@@ -57,6 +56,16 @@ namespace TIR.LegalExtractionService.Application
                 evt,
                 facts,
                 ct);
+            await _audit.PublishAsync(
+                new AuditEvent(
+                    evt.TenantId,
+                    "system",
+                    "Legal facts extracted",
+                    "Document",
+                    evt.DocumentId.ToString(),
+                    DateTime.UtcNow,
+                    evt.CorrelationId),
+                    ct);
         }
 
         private async Task<string> DownloadTextAsync(

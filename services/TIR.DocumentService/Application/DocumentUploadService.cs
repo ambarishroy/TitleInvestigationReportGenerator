@@ -1,9 +1,9 @@
-﻿using TIR.DocumentService.Audit;
-using TIR.DocumentService.Common;
+﻿using TIR.DocumentService.Common;
 using TIR.DocumentService.Domain;
 using TIR.DocumentService.Events;
 using TIR.DocumentService.Infrastructure.Storage;
 using TIR.DocumentService.Persistence;
+using TIR.SharedKernel.Audit;
 using TIR.SharedKernel.Events;
 
 namespace TIR.DocumentService.Application

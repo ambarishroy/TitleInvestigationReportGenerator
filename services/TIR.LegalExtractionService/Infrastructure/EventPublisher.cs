@@ -21,6 +21,8 @@ namespace TIR.LegalExtractionService.Infrastructure
 
         public async Task PublishFactsExtractedAsync(OcrCompletedEvent sourceEvent, List<LegalFact> facts, CancellationToken ct)
         {
+            if (facts == null || facts.Count == 0)
+                return;
             var evt = new LegalFactsExtractedEvent(
                 sourceEvent.TenantId,
                 sourceEvent.ProjectId,
@@ -35,7 +37,8 @@ namespace TIR.LegalExtractionService.Infrastructure
                 Source = "tir.legal-extraction",
                 DetailType = nameof(LegalFactsExtractedEvent),
                 Detail = JsonSerializer.Serialize(evt),
-                EventBusName = _busName
+                EventBusName = _busName,
+                Time = evt.ExtractedAtUtc
             };
 
             await _eventBridge.PutEventsAsync(
@@ -44,6 +47,15 @@ namespace TIR.LegalExtractionService.Infrastructure
                     Entries = new() { entry }
                 },
                 ct);
+            var response = await _eventBridge.PutEventsAsync(
+            new PutEventsRequest
+            {
+                Entries = new() { entry }
+            },
+            ct);
+
+                 if (response.FailedEntryCount > 0)
+                     throw new InvalidOperationException("Failed to publish LegalFactsExtractedEvent.");
         }
     }
 }

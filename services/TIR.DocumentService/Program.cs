@@ -1,8 +1,8 @@
 using TIR.DocumentService.Application;
-using TIR.DocumentService.Audit;
 using TIR.DocumentService.Events;
 using TIR.DocumentService.Infrastructure.Storage;
 using TIR.DocumentService.Persistence;
+using TIR.SharedKernel.Audit;
 
 var builder = WebApplication.CreateBuilder(args);
 
