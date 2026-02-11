@@ -1,6 +1,6 @@
 ﻿using TIR.SharedKernel.Events;
 
-namespace TIR.DocumentService.Audit
+namespace TIR.SharedKernel.Audit
 {
     public interface IAuditPublisher
     {

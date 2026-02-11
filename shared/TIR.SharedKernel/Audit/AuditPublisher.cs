@@ -1,15 +1,17 @@
 ﻿using Amazon.EventBridge;
 using Amazon.EventBridge.Model;
 using System.Text.Json;
-using TIR.DocumentService.Audit;
+//using TIR.DocumentService.Audit;
 using TIR.SharedKernel.Events;
+using Microsoft.Extensions.Configuration;
 
-namespace TIR.DocumentService.Audit
+namespace TIR.SharedKernel.Audit
 {
     public sealed class AuditPublisher : IAuditPublisher
     {
         private readonly IAmazonEventBridge _eventBridge;
         private readonly string _busName;
+       
 
         public AuditPublisher(
             IAmazonEventBridge eventBridge,

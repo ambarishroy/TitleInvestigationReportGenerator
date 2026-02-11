@@ -1,5 +1,6 @@
-﻿using TIR.DocumentService.Audit;
+﻿
 using TIR.DocumentService.Persistence;
+using TIR.SharedKernel.Audit;
 using TIR.SharedKernel.Events;
 
 namespace TIR.DocumentService.Application

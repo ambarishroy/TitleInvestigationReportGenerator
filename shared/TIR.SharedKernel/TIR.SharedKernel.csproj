@@ -10,4 +10,9 @@
     <Folder Include="Audit\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.EventBridge" Version="4.0.5.15" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+  </ItemGroup>
+
 </Project>
