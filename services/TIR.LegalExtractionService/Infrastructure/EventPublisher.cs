@@ -19,10 +19,7 @@ namespace TIR.LegalExtractionService.Infrastructure
             _busName = config["EventBridge:BusName"]!;
         }
 
-        public async Task PublishFactsExtractedAsync(
-            OcrCompletedEvent sourceEvent,
-            List<LegalFact> facts,
-            CancellationToken ct)
+        public async Task PublishFactsExtractedAsync(OcrCompletedEvent sourceEvent, List<LegalFact> facts, CancellationToken ct)
         {
             var evt = new LegalFactsExtractedEvent(
                 sourceEvent.TenantId,
