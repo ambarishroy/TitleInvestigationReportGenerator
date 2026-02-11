@@ -1,6 +1,7 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
 using System.Text;
+using TIR.LegalExtractionService.Extractors;
 using TIR.LegalExtractionService.Infrastructure;
 using TIR.SharedKernel.Events;
 

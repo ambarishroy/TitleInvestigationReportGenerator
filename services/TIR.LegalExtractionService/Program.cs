@@ -1,6 +1,8 @@
 using Amazon.S3;
 using TIR.LegalExtractionService.Application;
+using TIR.LegalExtractionService.Extractors;
 using TIR.LegalExtractionService.Infrastructure;
+using TIR.LegalExtractionService.Rules;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ builder.Services.AddAWSService<IAmazonS3>();
 builder.Services.AddScoped<OcrCompletedEventHandler>();
 builder.Services.AddScoped<FactExtractor>();
 builder.Services.AddScoped<EventPublisher>();
+builder.Services.AddScoped<ILegalFactRule, BorrowerNameRule>();
+builder.Services.AddScoped<ILegalFactRule, DeedNumberRule>();
 
 var app = builder.Build();
 
