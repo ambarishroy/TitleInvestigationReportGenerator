@@ -14,12 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.EventBridge" Version="4.0.5.15" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.3.22" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.18.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Extractors\" />
-    <Folder Include="Rules\" />
   </ItemGroup>
 
   <ItemGroup>
